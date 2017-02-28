@@ -7,8 +7,14 @@ namespace HotelWorldClocksTest
     public class HotelWorldClocksTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void the_time_of_clock_London_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time()
         {
+            //Arrange
+
+            //Act
+
+            //Assert
+            Assert.AreEqual(1, londonClock.getTime());
         }
     }
 }
