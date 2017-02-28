@@ -29,7 +29,7 @@
 
         public int getTime()
         {
-            return 9;
+            return this.time;
         }
     }
 }
