@@ -3,6 +3,7 @@
     public class CityClock
     {
         private int _utcOffset;
+        private int _utcZeroTime;
 
         public CityClock(int utcOffset)
         {
