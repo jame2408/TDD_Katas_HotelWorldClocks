@@ -2,7 +2,7 @@
 
 namespace HotelWorldClocks
 {
-    public class CityClock
+    public class CityClock : Clock
     {
         private int _utcOffset;
         private int _utcZeroTime;
