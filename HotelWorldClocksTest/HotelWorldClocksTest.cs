@@ -7,11 +7,13 @@ namespace HotelWorldClocksTest
     public class HotelWorldClocksTest
     {
         private HotelWorldClockSystem hotelWorldClockSystem;
+        private PhoneClock phoneClock;
 
         [TestInitialize]
         public void Initialize()
         {
             this.hotelWorldClockSystem = new HotelWorldClockSystem();
+            this.phoneClock = new PhoneClock(8);
         }
 
         [TestMethod]
@@ -19,7 +21,7 @@ namespace HotelWorldClocksTest
         {
             //Arrange
             CityClock londonClock = new CityClock(0);
-            PhoneClock phoneClock = new PhoneClock(8);
+
             hotelWorldClockSystem.attach(londonClock);
 
             //Act
@@ -35,7 +37,6 @@ namespace HotelWorldClocksTest
         {
             //Arrange
             CityClock newYorkClock = new CityClock(-5);
-            PhoneClock phoneClock = new PhoneClock(8);
 
             hotelWorldClockSystem.attach(newYorkClock);
 
@@ -57,8 +58,6 @@ namespace HotelWorldClocksTest
             hotelWorldClockSystem.attach(londonClock);
             hotelWorldClockSystem.attach(newYorkClock);
 
-            PhoneClock phoneClock = new PhoneClock(8);
-
             //Act
             phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
             phoneClock.setTime(9);
@@ -71,9 +70,6 @@ namespace HotelWorldClocksTest
         [TestMethod]
         public void the_time_of_the_phone_clock_should_be_set_correctly_after_its_setTime_method_is_invoked()
         {
-            //Arrange
-            PhoneClock phoneClock = new PhoneClock(8);
-
             //Act
             phoneClock.setTime(9);
 
@@ -86,7 +82,6 @@ namespace HotelWorldClocksTest
         {
             //Arrange
             CityClock moscowClock = new CityClock(4);
-            PhoneClock phoneClock = new PhoneClock(8);
 
             hotelWorldClockSystem.attach(moscowClock);
 
