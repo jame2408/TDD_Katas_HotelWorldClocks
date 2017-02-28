@@ -1,4 +1,6 @@
-﻿namespace HotelWorldClocks
+﻿using System;
+
+namespace HotelWorldClocks
 {
     public class CityClock
     {
@@ -14,6 +16,11 @@
         {
             //當地時間 = UTC時間 + (當地時間與UTC時間的時差)
             return this._utcZeroTime + this._utcOffset;
+        }
+
+        internal void setUtcZeroTime(int utcZeroTime)
+        {
+            this._utcZeroTime = utcZeroTime;
         }
     }
 }
