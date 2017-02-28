@@ -3,6 +3,7 @@
     public class PhoneClock : Clock
     {
         private HotelWorldClockSystem _hotelWorldClockSystem;
+        private int _time;
 
         public PhoneClock(int utcOffset)
         {
@@ -12,6 +13,7 @@
 
         public void setTime(int time)
         {
+            this._time = time;
             if (this._hotelWorldClockSystem == null)
             {
                 return;
@@ -29,7 +31,7 @@
 
         public int getTime()
         {
-            return this.time;
+            return this._time;
         }
     }
 }
