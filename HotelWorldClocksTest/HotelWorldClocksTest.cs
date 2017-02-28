@@ -61,5 +61,18 @@ namespace HotelWorldClocksTest
             Assert.AreEqual(1, londonClock.getTime());
             Assert.AreEqual(20, newYorkClock.getTime());
         }
+
+        [TestMethod]
+        public void the_time_of_the_phone_clock_should_be_set_correctly_after_its_setTime_method_is_invoked()
+        {
+            //Arrange
+            PhoneClock phoneClock = new PhoneClock(8);
+
+            //Act
+            phoneClock.setTime(9);
+
+            //Assert
+            Assert.AreEqual(9, phoneClock.getTime());
+        }
     }
 }
