@@ -16,7 +16,7 @@
 
         public void setTime(int time)
         {
-
+            this.CityClock.setUtcZeroTime(time - this._utcOffset);
         }
     }
 }
