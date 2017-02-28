@@ -6,13 +6,20 @@ namespace HotelWorldClocksTest
     [TestClass]
     public class HotelWorldClocksTest
     {
+        private HotelWorldClockSystem hotelWorldClockSystem;
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            this.hotelWorldClockSystem = new HotelWorldClockSystem();
+        }
+
         [TestMethod]
         public void the_time_of_clock_London_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time()
         {
             //Arrange
             CityClock londonClock = new CityClock(0);
             PhoneClock phoneClock = new PhoneClock(8);
-            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
             hotelWorldClockSystem.attach(londonClock);
 
             //Act
@@ -29,7 +36,7 @@ namespace HotelWorldClocksTest
             //Arrange
             CityClock newYorkClock = new CityClock(-5);
             PhoneClock phoneClock = new PhoneClock(8);
-            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+
             hotelWorldClockSystem.attach(newYorkClock);
 
             //Act
@@ -47,7 +54,6 @@ namespace HotelWorldClocksTest
             CityClock londonClock = new CityClock(0);
             CityClock newYorkClock = new CityClock(-5);
 
-            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
             hotelWorldClockSystem.attach(londonClock);
             hotelWorldClockSystem.attach(newYorkClock);
 
@@ -81,7 +87,7 @@ namespace HotelWorldClocksTest
             //Arrange
             CityClock moscowClock = new CityClock(4);
             PhoneClock phoneClock = new PhoneClock(8);
-            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+
             hotelWorldClockSystem.attach(moscowClock);
 
             //Act
