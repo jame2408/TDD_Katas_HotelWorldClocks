@@ -15,7 +15,7 @@ namespace HotelWorldClocks
         public int getTime()
         {
             //當地時間 = UTC時間 + (當地時間與UTC時間的時差)
-            return this._utcZeroTime + this._utcOffset;
+            return (this._utcZeroTime + this._utcOffset + 24) % 24;
         }
 
         internal void setUtcZeroTime(int utcZeroTime)
