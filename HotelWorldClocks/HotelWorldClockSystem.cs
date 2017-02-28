@@ -4,6 +4,8 @@ namespace HotelWorldClocks
 {
     public class HotelWorldClockSystem
     {
+        private IEnumerable<CityClock> _cityClocks;
+
         public void attach(CityClock cityClock)
         {
 
@@ -11,7 +13,7 @@ namespace HotelWorldClocks
 
         public IEnumerable<CityClock> getClocks()
         {
-            return this.cityClocks;
+            return this._cityClocks;
         }
     }
 }
