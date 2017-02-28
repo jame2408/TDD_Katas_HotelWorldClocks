@@ -29,7 +29,7 @@
             this._hotelWorldClockSystem = hotelWorldClockSystem;
         }
 
-        public int getTime()
+        public override int getTime()
         {
             return this._time;
         }

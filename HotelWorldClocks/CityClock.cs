@@ -11,7 +11,7 @@ namespace HotelWorldClocks
             _utcOffset = utcOffset;
         }
 
-        public int getTime()
+        public override int getTime()
         {
             //當地時間 = UTC時間 + (當地時間與UTC時間的時差)
             return (this._utcZeroTime + _utcOffset + 24) % 24;

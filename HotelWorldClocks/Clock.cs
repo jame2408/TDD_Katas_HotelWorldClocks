@@ -1,7 +1,8 @@
 ﻿namespace HotelWorldClocks
 {
-    public class Clock
+    public abstract class Clock
     {
         protected int _utcOffset;
+        public abstract int getTime();
     }
 }
