@@ -17,7 +17,10 @@
 
         public void setTime(int time)
         {
-            this._cityClock.setUtcZeroTime(time - this._utcOffset);
+            foreach (CityClock cityClock in this.hotelWorldClockSystem.getClocks())
+            {
+                cityClock.setUtcZeroTime(time - this._utcOffset);
+            }
         }
 
         public void setHotelWorldClockSystem(HotelWorldClockSystem hotelWorldClockSystem)
