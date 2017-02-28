@@ -8,5 +8,10 @@
         {
             this._utcOffset = utcOffset;
         }
+
+        public void setCityClock(CityClock cityClock)
+        {
+
+        }
     }
 }
