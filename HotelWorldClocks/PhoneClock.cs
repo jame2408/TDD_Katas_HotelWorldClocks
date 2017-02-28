@@ -19,5 +19,10 @@
         {
             this._cityClock.setUtcZeroTime(time - this._utcOffset);
         }
+
+        public void setHotelWorldClockSystem(HotelWorldClockSystem hotelWorldClockSystem)
+        {
+
+        }
     }
 }
