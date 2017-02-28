@@ -12,9 +12,11 @@ namespace HotelWorldClocksTest
             //Arrange
             CityClock londonClock = new CityClock(0);
             PhoneClock phoneClock = new PhoneClock(8);
+            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.attach(londonClock);
 
             //Act
-            phoneClock.setCityClock(londonClock);
+            phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
             phoneClock.setTime(9);
 
             //Assert
@@ -27,9 +29,11 @@ namespace HotelWorldClocksTest
             //Arrange
             CityClock newYorkClock = new CityClock(-5);
             PhoneClock phoneClock = new PhoneClock(8);
+            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.attach(newYorkClock);
 
             //Act
-            phoneClock.setCityClock(newYorkClock);
+            phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
             phoneClock.setTime(9);
 
             //Assert
