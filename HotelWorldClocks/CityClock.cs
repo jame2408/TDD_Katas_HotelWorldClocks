@@ -11,7 +11,8 @@
 
         public int getTime()
         {
-            return 1;
+            //當地時間 = UTC時間 + (當地時間與UTC時間的時差)
+            return this._utcZeroTime + this._utcOffset;
         }
     }
 }
