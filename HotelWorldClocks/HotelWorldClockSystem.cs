@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 
 namespace HotelWorldClocks
 {
     public class HotelWorldClockSystem
     {
-        private IEnumerable<CityClock> _cityClocks;
+        private ArrayList _cityClocks = new ArrayList();
 
         public void attach(CityClock cityClock)
         {
-
+            this._cityClocks.Add(cityClock);
         }
 
-        public IEnumerable<CityClock> getClocks()
+        public ArrayList getClocks()
         {
             return this._cityClocks;
         }
