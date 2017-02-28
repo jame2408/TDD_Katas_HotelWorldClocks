@@ -74,5 +74,22 @@ namespace HotelWorldClocksTest
             //Assert
             Assert.AreEqual(9, phoneClock.getTime());
         }
+
+        [TestMethod]
+        public void the_time_of_clock_Moscow_should_be_5_after_the_phone_clock_is_set_to_9_Beijing_time()
+        {
+            //Arrange
+            CityClock moscowClock = new CityClock(4);
+            PhoneClock phoneClock = new PhoneClock(8);
+            HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.attach(moscowClock);
+
+            //Act
+            phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
+            phoneClock.setTime(9);
+
+            //Assert
+            Assert.AreEqual(5, moscowClock.getTime());
+        }
     }
 }
