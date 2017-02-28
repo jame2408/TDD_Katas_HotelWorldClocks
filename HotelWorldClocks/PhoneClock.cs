@@ -3,6 +3,7 @@
     public class PhoneClock
     {
         private int _utcOffset;
+        private CityClock _cityClock;
 
         public PhoneClock(int utcOffset)
         {
@@ -11,12 +12,12 @@
 
         public void setCityClock(CityClock cityClock)
         {
-
+            this._cityClock = cityClock;
         }
 
         public void setTime(int time)
         {
-            this.CityClock.setUtcZeroTime(time - this._utcOffset);
+            this._cityClock.setUtcZeroTime(time - this._utcOffset);
         }
     }
 }
