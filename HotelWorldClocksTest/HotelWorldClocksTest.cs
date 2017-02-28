@@ -1,4 +1,4 @@
-﻿using System;
+﻿using HotelWorldClocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HotelWorldClocksTest
