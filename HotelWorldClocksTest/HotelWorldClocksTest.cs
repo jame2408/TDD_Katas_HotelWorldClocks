@@ -12,6 +12,8 @@ namespace HotelWorldClocksTest
             //Arrange
 
             //Act
+            phoneClock.setCityClock(londonClock);
+            phoneClock.setTime(9);
 
             //Assert
             Assert.AreEqual(1, londonClock.getTime());
